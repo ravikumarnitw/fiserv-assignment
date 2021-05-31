@@ -1,0 +1,34 @@
+:host {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas: "header header"
+                         "category list";
+    grid-template-columns: 2fr 10fr;
+    grid-template-rows: min-content 1fr;
+    padding: 1rem;
+}
+
+.header {
+    grid-area: header;
+}
+
+.category {
+    grid-area: category;
+    min-width: 160px;
+}
+
+.list {
+    grid-area: list;
+}
+
+@media only screen and (max-width:720px) {
+    :host{
+        grid-template-areas: "header"
+                             "category"
+                             "list";
+        grid-template-columns: 100%;
+        grid-template-rows: min-content min-content 1fr;
+    }
+}
+

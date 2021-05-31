@@ -1,0 +1,36 @@
+:host {
+    display: flex;
+    padding: 10px 2px;
+    justify-content: space-between;
+    flex-direction: row;
+
+    & .category {
+        cursor: pointer;
+        font-size: 10px;
+        color: gray;
+
+        &.active {
+            font-weight: bold;
+            border-bottom: 2px solid;
+            color: black;
+        }
+    }
+}
+
+@media only screen and (min-width: 720px) {
+    :host {
+        flex-direction: column;
+        padding: 10px;
+        justify-content: unset;
+    
+        & .category {
+            padding: 5px 10px;
+            width: fit-content;
+            font-size: 14px;
+
+            &.active {
+                border-bottom: unset;
+            }
+        }
+    }
+}

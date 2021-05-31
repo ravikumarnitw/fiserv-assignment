@@ -1,0 +1,8 @@
+<input placeholder="Start typing document name..." type="text" [(ngModel)]="searchText" name="searchText"  />
+<div class="list-container">
+    <div *ngFor="let document of arrDocumentlist | search : searchText" class="list-item">
+        <div class="category" >
+            <button [class]="document.category">{{document.category}}</button></div>
+        <div class="document-name">{{document.name}}</div>
+    </div>
+</div>

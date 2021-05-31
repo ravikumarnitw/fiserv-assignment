@@ -1,0 +1,4 @@
+<div *ngFor="let category of categories;let i = index" class="category" [ngClass]="{'active': i === nSelectedIndex}"
+    (click)="fnOnCategoryClick(category, i)">
+    {{category}}
+</div>
