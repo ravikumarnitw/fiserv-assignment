@@ -8,7 +8,6 @@ import IDocument from 'src/app/models/document';
 })
 export class DocumentlistComponent implements OnInit {
 
-  public searchText: string;
 
   @Input() arrDocumentlist: Array<IDocument> = [];
   constructor() { }
